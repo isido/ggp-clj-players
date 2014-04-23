@@ -5,10 +5,8 @@
   (shell/sh "java" "-cp" "target/ggp-clj-players-0.1.1-standalone.jar" "org.ggp.base.apps.kiosk.Kiosk")
   (System/exit 0))
 
-(defn play []
-  (println (:out (shell/sh "java" "-cp" "target/ggp-clj-players-0.1.1-standalone.jar" "org.ggp.base.apps.player.PlayerRunner" "9147" "cljRandomPlayer")))
+(defn play [player port]
+  "Start player, for example (play "cljRandomPlayer" 9147)"
+  (println (:out (shell/sh "java" "-cp" "target/ggp-clj-players-0.1.1-standalone.jar" "org.ggp.base.apps.player.PlayerRunner" (str port) player)))
   (System/exit 0))
 
-(defn play2 []
-  (println (:out (shell/sh "java" "-cp" "target/ggp-clj-players-0.1.1-standalone.jar" "org.ggp.base.apps.player.PlayerRunner" "9147" "cljLegalPlayer")))
-  (System/exit 0))

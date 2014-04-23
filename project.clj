@@ -10,6 +10,5 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [ggp-base "0.1.1"]]
   :profiles {:uberjar {:aot [ggp-clj-players.random ggp-clj-players.legal]}}
-  :aliases {"kiosk" ["do" "clean" ["uberjar"] ["run" "-m" "ggp-clj-players.core/kiosk"]]
-            "launch" ["do" "clean" ["uberjar"] ["run" "-m" "ggp-clj-players.core/play2"]]}
+  :aliases {"kiosk" ["do" "clean" ["uberjar"] ["run" "-m" "ggp-clj-players.core/kiosk"]]}
   )

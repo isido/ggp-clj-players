@@ -32,15 +32,28 @@ Then pick any of the sample games available in the Kiosk and pick the
 cljRandomPlayer to test it out. The other sample players listed come
 from the Java library itself.
 
-You can also fire the player of your choice for remote game playing
-via ``lein launch``
+You can start player server with ``play.sh``-script:
+
+```
+$ ./play.sh player-name [port]
+```
+
+for example:
+
+```
+$ ./play.sh cljRandomPlayer
+```
+
+*TODO*: At the moment ``lein kiosk`` builds jar-file needed for ``play.sh``-script. So run that before using the script.
 
 ## License
 
 The code is licensed under MIT license.
 
 Copyright © 2014 Sébastien Arnaud
+
 Copyright © 2014 Ilja Sidoroff
 
 [1] https://class.coursera.org/ggp-002
+
 [2] http://arrogant.stanford.edu/ggp/chapters/chapter_04.html
